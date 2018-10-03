@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery-3.3.1.js"></script>
+    <meta charset="utf-8">
+    <style >
+      h4{
+        background-color: lightblue;
+        width: 100px;
+      }
+    </style>
+    <script>
+      $(document).ready(function(){
+        $("#one").click(function(){
+          alert("text:"+$(".first").text());//택스트를 경고창에 보여준다
+        });
+        $("#two").click(function(){
+          alert("html:"+$(".first").html());//html 태그를 경고창에 보여준다.
+        });
+      });
+      $(document).ready(function(){
+        $("#three").click(function(){
+          alert("value:"+$(".second").val());//value 값을 경고창에 보여준다.
+        });
+      });
+      $(document).ready(function(){
+        $("#four").click(function(){
+          alert($(".third").attr("href"));//속성값을 경고창에 보여준다.
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>HTML - Get</h1>
+
+      <h4>text.() & html()</h4>
+        <button id="one">text</button>
+        <button id="two">html</button>
+        <div class="first"> javascript <b>and</b> jquery</div>
+
+      <h4>val()</h4>
+        <button id="three">val</button>
+        <p>name:<input type="text" value="tom & jerry" class="second"></p>
+
+      <h4>attr()</h4>
+      <button id="four">attributes</button>
+      <p> <a class="third" href="www.naver.com">www.naver.com </a></p>
+
+  </body>
+</html>
