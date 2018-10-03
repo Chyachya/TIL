@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery-3.3.1.js"></script>
+    <meta charset="utf-8">
+    <script>
+      $(document).ready(function(){
+        $("#one").click(function(){
+          $("#first").text("Donald duck");
+        });
+        $("#two").click(function(){
+          $("#first").html("<b>Wall-E</b>");
+        });
+        $("#three").click(function(){
+          $("#second").val("Walles and gromit");
+        });
+        $("#four").click(function(){
+          $("third").attr("href","https://www.google.co.kr");
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <h1>HTML-Set</h1>
+
+      <h4>text() & html()</h4>
+        <button id="one">text</button>
+        <button id="two">html</button>
+        <p id="first"> click and change!</p>
+
+      <h4></h4>
+        <button id="three">val()</button>
+        <input id="second"type="text" value="I will change to this...">
+
+      <h4></h4>
+        <button id="four">attr()</button>
+        <p> <a id="third" href="https://www.naver.com">www.naver.com</a> </p>
+  </body>
+</html>
